@@ -91,5 +91,5 @@ Deployments first because nothing else works without a reliable pipeline. You ca
 
 **This document is a snapshot.** I believe documentation should be living, it evolves every time I get new feedback, learn something from the team, or hit something I didn't anticipate. That's why I built the full plan as a web page rather than a static PDF. This one-pager gives you the headlines, BUT the site gives you the full depth, and it'll keep getting better.
 
-**For the full plan (proposals, roadmap, technical details, appendix) visit the docs site.**
+**Full plan:** [amandasouza.app/platform-eng-playbook](https://www.amandasouza.app/platform-eng-playbook)
 
