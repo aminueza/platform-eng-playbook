@@ -8,14 +8,14 @@ description: Executive one-pager for PDF export
   nav, .md-sidebar, .md-header, .md-footer, .md-tabs, .md-top { display: none !important; }
   .md-content { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
   .md-main__inner { margin: 0 !important; }
-  body { font-size: 7.5pt; line-height: 1.2; }
-  h1 { font-size: 13pt; margin: 0 0 2px 0; }
-  h2 { font-size: 9.5pt; margin: 4px 0 2px 0; border-bottom: 0.5pt solid #ddd; padding-bottom: 1px; }
-  table { font-size: 7pt; margin: 2px 0 4px 0; }
-  table th, table td { padding: 1px 4px !important; }
-  p, li { font-size: 7.5pt; margin: 1px 0; }
-  hr { margin: 3px 0; }
-  img { display: none !important; }
+  body { font-size: 7pt; line-height: 1.15; }
+  h1 { font-size: 12pt; margin: 0 0 1px 0; }
+  h2 { font-size: 8.5pt; margin: 3px 0 1px 0; border-bottom: 0.5pt solid #ddd; padding-bottom: 1px; }
+  table { font-size: 6.5pt; margin: 1px 0 3px 0; }
+  table th, table td { padding: 1px 3px !important; }
+  p, li { font-size: 7pt; margin: 1px 0; }
+  hr { margin: 2px 0; }
+  img { max-height: 80px !important; width: auto !important; margin: 2px 0 !important; }
 }
 </style>
 
