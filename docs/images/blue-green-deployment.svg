@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="albGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8fafc"/>
+  
+  <!-- Grid pattern (subtle) -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+  </pattern>
+  <rect width="600" height="400" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="300" y="35" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="600" fill="#1e293b" text-anchor="middle">Blue-Green Deployment</text>
+  
+  <!-- ALB Box -->
+  <rect x="225" y="60" width="150" height="60" rx="12" fill="url(#albGradient)" filter="url(#shadow)"/>
+  <text x="300" y="95" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">ALB</text>
+  <text x="300" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle">Load Balancer</text>
+  
+  <!-- Connection lines from ALB -->
+  <line x1="260" y1="120" x2="160" y2="190" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="340" y1="120" x2="440" y2="190" stroke="#64748b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Traffic labels -->
+  <rect x="155" y="145" width="65" height="22" rx="11" fill="#3b82f6"/>
+  <text x="187" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle">100%</text>
+  
+  <rect x="380" y="145" width="65" height="22" rx="11" fill="#94a3b8"/>
+  <text x="412" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="500" fill="white" text-anchor="middle">0%</text>
+  
+  <!-- Blue Environment Box -->
+  <rect x="60" y="200" width="180" height="150" rx="12" fill="white" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Blue header -->
+  <rect x="60" y="200" width="180" height="40" rx="12" fill="url(#blueGradient)"/>
+  <rect x="60" y="228" width="180" height="12" fill="url(#blueGradient)"/>
+  
+  <text x="150" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">Blue (v1.0)</text>
+  
+  <!-- Blue content -->
+  <rect x="80" y="260" width="140" height="28" rx="6" fill="#dbeafe"/>
+  <text x="150" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#1e40af" text-anchor="middle">CURRENT</text>
+  
+  <text x="150" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Serving production traffic</text>
+  
+  <!-- Active indicator -->
+  <circle cx="85" cy="330" r="6" fill="#22c55e"/>
+  <circle cx="85" cy="330" r="6" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="97" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#22c55e" font-weight="500">ACTIVE</text>
+  
+  <!-- Green Environment Box -->
+  <rect x="360" y="200" width="180" height="150" rx="12" fill="white" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Green header -->
+  <rect x="360" y="200" width="180" height="40" rx="12" fill="url(#greenGradient)"/>
+  <rect x="360" y="228" width="180" height="12" fill="url(#greenGradient)"/>
+  
+  <text x="450" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">Green (v1.1)</text>
+  
+  <!-- Green content -->
+  <rect x="380" y="260" width="140" height="28" rx="6" fill="#dcfce7"/>
+  <text x="450" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#166534" text-anchor="middle">NEW</text>
+  
+  <text x="450" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Ready for deployment</text>
+  
+  <!-- Health check indicator -->
+  <circle cx="385" cy="330" r="6" fill="#f59e0b"/>
+  <text x="397" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#f59e0b" font-weight="500">HEALTH CHECK</text>
+  
+  <!-- Legend -->
+  <rect x="170" y="370" width="260" height="24" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="200" y1="382" x2="220" y2="382" stroke="#64748b" stroke-width="2"/>
+  <text x="228" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">Active traffic</text>
+  <line x1="330" y1="382" x2="350" y2="382" stroke="#64748b" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="358" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">Standby</text>
+</svg>
+

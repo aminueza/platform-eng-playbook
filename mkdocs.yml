@@ -1,0 +1,58 @@
+site_name: Platform Engineering - 90-Day Plan
+site_description: Senior Platform Engineer (IC-3) Assessment & Roadmap
+site_author: Amanda Souza
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - One-Pager (PDF): one-pager.md
+  - 1. Assessment:
+    - What's Going On: 01-assessment/README.md
+    - Priority Ranking: 01-assessment/priorities.md
+  - 2. Proposals:
+    - Why These Two: 02-proposals/README.md
+    - Deployment Pipeline: 02-proposals/deployment-pipeline.md
+    - Observability & Alerts: 02-proposals/observability-alerts.md
+    - Incident Management: 02-proposals/incident-process.md
+  - 3. Roadmap:
+    - Timeline & Phases: 03-roadmap/README.md
+    - "Week 1-2: Listen & Learn": 03-roadmap/week-1-2.md
+    - "Week 3-4: Foundations": 03-roadmap/week-3-4.md
+    - "Month 2: Acceleration": 03-roadmap/month-2.md
+    - "Month 3: Scale": 03-roadmap/month-3.md
+  - 4. Communication: 04-communication/README.md
+  - 5. Appendix:
+    - Clarifying Questions: 05-appendix/clarifying-questions.md
+    - Microservices Conversation: 05-appendix/microservices-conversation.md
+    - De-risking the 6-Month Feature: 05-appendix/derisking-6-month-feature.md
+    - Gaps & Considerations: 05-appendix/gaps-and-considerations.md
+    - References: 05-appendix/references.md
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - codehilite
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+extra_css:
+  - stylesheets/extra.css
