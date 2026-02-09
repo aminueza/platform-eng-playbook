@@ -5,33 +5,33 @@ description: Executive one-pager for PDF export
 <style>
 /* PDF-friendly single-page layout */
 @media print {
-  nav, .md-sidebar, .md-header, .md-footer, .md-tabs { display: none !important; }
+  nav, .md-sidebar, .md-header, .md-footer, .md-tabs, .md-top { display: none !important; }
   .md-content { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
-  body { font-size: 9pt; line-height: 1.3; }
-  h1 { font-size: 16pt; margin: 0 0 4px 0; }
-  h2 { font-size: 11pt; margin: 8px 0 4px 0; }
-  h3 { font-size: 10pt; margin: 6px 0 2px 0; }
-  table { font-size: 8.5pt; }
-  p, li { font-size: 9pt; margin: 2px 0; }
+  .md-main__inner { margin: 0 !important; }
+  body { font-size: 7.5pt; line-height: 1.2; }
+  h1 { font-size: 13pt; margin: 0 0 2px 0; }
+  h2 { font-size: 9.5pt; margin: 4px 0 2px 0; border-bottom: 0.5pt solid #ddd; padding-bottom: 1px; }
+  table { font-size: 7pt; margin: 2px 0 4px 0; }
+  table th, table td { padding: 1px 4px !important; }
+  p, li { font-size: 7.5pt; margin: 1px 0; }
+  hr { margin: 3px 0; }
+  img { display: none !important; }
 }
 </style>
 
 # Platform Engineering: 90-Day Plan
 
-**Amanda Souza** · Senior Platform Engineer · February 2026
+**Amanda Souza** · Senior Platform Engineer · February 2026 <br>
 **Full plan:** [amandasouza.app/platform-eng-playbook](https://www.amandasouza.app/platform-eng-playbook)
-
 ---
 
 ## The Problem
 
-Last month we had two Sev-1 incidents, both caused by deployments. Deploys take 4 hours, which blocks engineers from merging and costs us roughly 50-75 engineer-hours per week. On-call can't keep up with alert noise, and only 3 people in a 50-person org know how to debug production.
+Two Sev-1 incidents last month, both from deployments. 4-hour deploy cycles block 50 engineers from merging (~50-75 lost engineer-hours/week). On-call can't keep up with alert noise, and only 3 people can debug production.
 
 ## Proposal 1: Safe & Fast Deployment Pipeline
 
-Deployments are the single biggest bottleneck. 4-hour cycles, 50 engineers waiting, and the two Sev-1s both came from DB migrations that went wrong. We fix this with blue/green deployments, a migration linter and lock timeouts in CI, feature flags, and automated rollback.
-
-~4 weeks of work, me and one engineer.
+Blue/green deployments, DB migration linter + lock timeouts in CI, feature flags, automated rollback. ~4 weeks, me + one engineer.
 
 ![Blue/Green Deployment Flow](images/blue-green-deployment.svg)
 
@@ -44,9 +44,7 @@ Deployments are the single biggest bottleneck. 4-hour cycles, 50 engineers waiti
 
 ## Proposal 2: Observability & Incident Response
 
-On-call gets paged constantly but half the alerts don't have a clear action. Meanwhile, if something breaks in production, the same 3 people get pulled in every time because nobody else knows how to use Datadog. We audit and clean up alerts, write runbooks for the ones that matter, set up an SRE champions program so each team has someone who can actually debug prod, and fix staging so it reproduces real issues.
-
-~3 weeks of work, me and one engineer.
+Alert audit + cleanup, runbooks for actionable alerts, SRE champions program (1-2 per team), staging parity for prod debugging. ~3 weeks, me + one engineer.
 
 ![Observability & Incident Response Flow](images/observability-flow.svg)
 
@@ -54,7 +52,7 @@ On-call gets paged constantly but half the alerts don't have a clear action. Mea
 |--------|-------|--------|---------|
 | Actionable alerts | Unknown (low) | **> 80%** | > 90% |
 | MTTR (Sev-1) | Hours | **< 1 hour** | < 30 min |
-| Engineers who debug prod | ~3 | **15-20** (SRE champions) | All 50 (6-mo) |
+| Engineers who debug prod | ~3 | **15-20** | All 50 (6-mo) |
 | Staging reproduces prod | Rarely | **60-70%** | 80%+ |
 
 ## 90-Day Roadmap
@@ -86,9 +84,9 @@ On-call gets paged constantly but half the alerts don't have a clear action. Mea
 
 ## Why This Order
 
-Deployments first because nothing else works without a reliable pipeline. You can't run microservices if every deploy takes 4 hours. You can't improve reliability if only 3 people can see what's happening in prod. We get quick wins on the board in month 1, which gives us credibility to push the harder changes in months 2 and 3.
+Pipeline first because nothing else works without reliable deploys. Can't run microservices on a 4-hour deploy cycle. Can't improve reliability if only 3 people can see what's happening. Quick wins in month 1 build credibility for harder changes later.
 
 ---
 
-**This document is a snapshot.** I believe documentation should be living, it evolves every time I get new feedback, learn something from the team, or hit something I didn't anticipate. That's why I built the full plan as a web page rather than a static PDF. This one-pager gives you the headlines, the site gives you the full depth.
+*This is a living document. The full plan has proposals, roadmaps, technical details, and supporting material.*
 
