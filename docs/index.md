@@ -36,9 +36,7 @@ Fix the pipeline first, and you unlock everything else: developer productivity, 
 
 ## How to Read This Plan
 
-Short on time? Start with the **[one-pager](one-pager.md)**, it covers both proposals, the timeline, and target outcomes on a single page.
-
-For the full depth, read in this order:
+Read in this order:
 
 1. **[Assessment](01-assessment/README.md):** What's actually going on beneath the symptoms, and which problems to solve first.
 2. **[Proposals](02-proposals/README.md):** Two concrete initiatives with expected impact: the deployment pipeline and the observability program.

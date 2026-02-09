@@ -20,7 +20,6 @@ theme:
 
 nav:
   - Home: index.md
-  - One-Pager (PDF): one-pager.md
   - 1. Assessment:
     - What's Going On: 01-assessment/README.md
     - Priority Ranking: 01-assessment/priorities.md

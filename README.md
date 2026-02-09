@@ -2,8 +2,8 @@
 
 A 90-day platform engineering plan covering deployment pipeline, observability, and team scaling.
 
-**Author:** Amanda Souza
-**Date:** February 2026
+**Author:** Amanda Souza<br>
+**Date:** February 2026<br>
 
 ---
 
