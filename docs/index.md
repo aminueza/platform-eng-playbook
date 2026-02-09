@@ -1,5 +1,5 @@
 ---
-description: Senior Platform Engineer (IC-3) | 90-Day Assessment & Roadmap
+description: 90-Day Platform Engineering Plan
 ---
 
 # Platform Engineering: 90-Day Plan

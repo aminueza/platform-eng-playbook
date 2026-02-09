@@ -1,6 +1,6 @@
 # Platform Engineering: 90-Day Plan
 
-Senior Platform Engineer (IC-3) assessment and roadmap for Moxie.
+A 90-day platform engineering plan covering deployment pipeline, observability, and team scaling.
 
 **Author:** Amanda Souza
 **Date:** February 2026
@@ -38,11 +38,11 @@ The site will be available at: `https://[username].github.io/[repo-name]/`
 
 ## Structure
 
-- **Assessment** — Root cause analysis and priority ranking
-- **Proposals** — Two concrete technical proposals with metrics
-- **Roadmap** — Week-by-week execution plan with ownership
-- **Communication** — Stakeholder communication strategy
-- **Appendix** — Clarifying questions, microservices conversation, de-risking the 6-month feature
+- **Situation Analysis**: Root cause analysis and priority ranking
+- **Proposals**: Two concrete technical proposals with metrics
+- **Roadmap**: Week-by-week execution plan with ownership
+- **Communication**: Stakeholder communication strategy
+- **Appendix**: Clarifying questions, microservices conversation, de-risking the 6-month feature
 
 ---
 
